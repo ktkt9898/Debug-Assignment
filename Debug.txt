@@ -1,0 +1,12 @@
+Bug Number 1:
+Ran the tester on handout files
+emptySet_testIsEmpty fails
+Set breakpoint in SetTester on line 111
+Stepped through...
+Found on line...
+Added statement to fix...
+Rerun tester - 
+
+Bug Number 2:
+
+Bug Number 3:

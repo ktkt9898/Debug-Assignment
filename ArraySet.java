@@ -7,6 +7,8 @@ import java.util.NoSuchElementException;
  * @param <T> type to store in the set
  * 
  * @author mvail
+ * 
+ * There are only three bugs
  */
 public class ArraySet<T> implements SimpleSet<T> {
 	private static final int DEFAULT_CAPACITY = 3;
@@ -37,7 +39,7 @@ public class ArraySet<T> implements SimpleSet<T> {
 
 	@Override
 	public boolean isEmpty() {
-		return (rear > 0);
+		return (rear >= 0);
 	}
 
 	@Override
