@@ -108,7 +108,7 @@ public class SetTester {
 			// for example emptySet_addA_A_testIsEmpty
 			System.out.println("NEW EMPTY SET");
 			printTest("emptySet_testToString", testToString(emptySet(), Result.ValidString));
-			printTest("emptySet_testIsEmpty", testIsEmpty(emptySet(), Result.True));
+			printTest("emptySet_testIsEmpty", testIsEmpty(emptySet(), Result.True)); // Bug 1 Fixed
 			printTest("emptySet_testSize", testSize(emptySet(), 0));
 			printTest("emptySet_testContainsA", testContains(emptySet(), ELEMENT_A, Result.False));
 			printTest("emptySet_testAddA", testAdd(emptySet(), ELEMENT_A, Result.NoException));
