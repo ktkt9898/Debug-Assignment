@@ -1,22 +1,23 @@
-## Bug Number 1:
+# Bug Number 1:
 Ran the tester on handout files
 emptySet_testIsEmpty fails
 
 Set breakpoint in SetTester on line 111, location of the tester method
 Stepped Over to line 658, where a try catch block tests the isEmpty() method
-on a valid set, on line 42 of ArrayList
+on a valid set, on line 42 of ArraySet class.
 
 Found on line 42 the isEmpty() method performs a boolean statement:
 return (rear > 0);
 
-Where rear is initially assigned to be zero. This statement will always
-return false since it does not check if equal to zero.
+Where rear is initially assigned to be zero.
+
+This statement will always return false since it does not check if equal to zero.
 
 Added statement to fix changing the greater than operator to is ( == ) operator.
 
 Reran the tester class and emptySet_testIsEmpty passes.
 
-## Bug Number 2:
+# Bug Number 2:
 Ran the tester on handout files
 emptySet_addA_A_testIsEmpty fails
 
@@ -26,8 +27,9 @@ Stepped over to line 658, where a try catch block tests again the isEmpty() meth
 Even after adding an element value, rear never is updated so the isEmpty() method returns True
 when the expectation is False.
 
-Ran the debugger at the same breakpoint and steppend into line 137, where the add() method is called.
-Nowhere in the block is rear incremented.
+Ran the debugger at the same breakpoint and steppend into line 137, where the add() method is called
+on line 56 of the ArraySet class.
+Nowhere in the block is the variable rear incremented.
 
 Added the statement:
 rear++
@@ -36,14 +38,15 @@ To ensure rear is incremented when a value is added to the array
 
 Reran the tester class and emptySet_addA_A_testIsEmpty passes.
 
-## Bug Number 3:
+# Bug Number 3:
 Ran the tester on handout files
 A_addB_AB_testRemoveA fails
 
 Set breakpoint in SetTester on line 265, location of tester method.
 Stepped into, where again an empty set is created and then two values are added to the set.
 Steppend into the next method, where testRemove() is attempted on line 604.
-Steppend into testRemove() where remove() is attempting to remove an element value
+Steppend into testRemove() where remove() is attempting to remove an element value, on line
+67 of the ArraySet class.
 Index out of bounds error exception is printed.
 
 Modified the while loop statement to take the value of rear and minus 1, to avoid going over
