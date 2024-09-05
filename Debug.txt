@@ -1,3 +1,10 @@
+****************
+* Debug.txt
+* CS 221
+* 09/05/2024
+* Kyle Truschel
+**************** 
+
 # Bug Number 1:
 Ran the tester on handout files
 emptySet_testIsEmpty fails
